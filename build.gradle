@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.4'
+    id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'org.Toy'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter' // Spring Boot Starter
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf 추가
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Spring Web
+    implementation 'org.projectlombok:lombok' // Lombok 추가
+    annotationProcessor 'org.projectlombok:lombok' // Lombok 애노테이션 프로세서 추가
+    developmentOnly 'org.springframework.boot:spring-boot-devtools' // DevTools 추가
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트 관련 의존성
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
